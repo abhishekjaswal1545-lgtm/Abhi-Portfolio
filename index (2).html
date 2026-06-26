@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AJ.DEV | Abhishek Jaswal Portfolio - Neomorphic Glow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#eac324",
+                    "surface": "#0d1515",
+                    "on-secondary": "#520072",
+                    "on-primary-fixed-variant": "#004f54",
+                    "on-secondary-container": "#fff6fc",
+                    "on-tertiary-fixed": "#231b00",
+                    "inverse-on-surface": "#2a3233",
+                    "on-error": "#690005",
+                    "surface-container-high": "#232b2c",
+                    "on-primary-container": "#006970",
+                    "surface-container-low": "#151d1e",
+                    "surface-container-lowest": "#080f10",
+                    "on-tertiary-container": "#715d00",
+                    "outline-variant": "#3b494b",
+                    "on-tertiary": "#3b2f00",
+                    "primary-container": "#00f0ff",
+                    "on-secondary-fixed": "#320047",
+                    "tertiary-container": "#fed639",
+                    "primary-fixed": "#7df4ff",
+                    "tertiary-fixed": "#ffe179",
+                    "inverse-surface": "#dce4e5",
+                    "secondary-container": "#b600f8",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#b9cacb",
+                    "on-primary": "#00363a",
+                    "surface-container": "#192122",
+                    "secondary-fixed-dim": "#ebb2ff",
+                    "surface-variant": "#2e3637",
+                    "background": "#0d1515",
+                    "secondary": "#ebb2ff",
+                    "on-primary-fixed": "#002022",
+                    "inverse-primary": "#006970",
+                    "primary": "#dbfcff",
+                    "on-background": "#dce4e5",
+                    "on-surface": "#dce4e5",
+                    "primary-fixed-dim": "#00dbe9",
+                    "secondary-fixed": "#f8d8ff",
+                    "tertiary": "#fff5de",
+                    "surface-tint": "#00dbe9",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "surface-container-highest": "#2e3637",
+                    "surface-bright": "#333b3b",
+                    "surface-dim": "#0d1515",
+                    "outline": "#849495",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#74009f",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "title-md": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "body-sm": ["Sora"],
+                    "body-lg": ["Sora"],
+                    "label-caps": ["Space Mono"],
+                    "headline-lg": ["Sora"],
+                    "display-lg": ["Sora"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0d1515;
+            color: #dce4e5;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        /* Neomorphic Glow Card */
+        .neo-card {
+            background: #192122;
+            box-shadow: 
+                -8px -8px 20px rgba(255, 255, 255, 0.02),
+                8px 8px 20px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .neo-card:hover {
+            box-shadow: 
+                -2px -2px 10px rgba(255, 255, 255, 0.03),
+                2px 2px 10px rgba(0, 0, 0, 0.5),
+                0 0 15px rgba(0, 219, 233, 0.2);
+            border-color: rgba(0, 219, 233, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .neo-inset {
+            background: #0d1515;
+            box-shadow: inset 4px 4px 10px rgba(0,0,0,0.5), 
+                        inset -4px -4px 10px rgba(255,255,255,0.03);
+        }
+
+        .glow-cyan {
+            filter: drop-shadow(0 0 8px rgba(0, 219, 233, 0.6));
+        }
+        
+        .glow-violet {
+            filter: drop-shadow(0 0 12px rgba(182, 0, 248, 0.6));
+        }
+
+        .bg-radial-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 219, 233, 0.05) 0%, transparent 70%);
+        }
+
+        .glass-panel {
+            background: rgba(25, 33, 34, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(0, 219, 233, 0.4);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container font-body-lg">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-title-md tracking-tighter text-primary-fixed-dim drop-shadow-[0_0_8px_rgba(0,219,233,0.8)]">AJ.DEV</div>
+<div class="hidden md:flex gap-8 items-center font-title-md text-title-md">
+<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim drop-shadow-[0_0_10px_rgba(0,219,233,0.5)] transition-all duration-300" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#experience">Bio_Data</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#skills">Tech_Stack</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#projects">Signal</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-2.5 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]">
+            Connect
+        </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-radial-gradient" id="home">
+<!-- Decorative Glows -->
+<div class="absolute top-1/4 -left-24 w-96 h-96 bg-primary-container/10 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 -right-24 w-96 h-96 bg-secondary-container/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full neo-inset border border-primary/20 text-primary-fixed-dim font-label-caps text-label-caps">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+                    AVAILABLE FOR NEW PROTOCOLS
+                </div>
+<h1 class="font-display-lg text-display-lg leading-tight">
+                    Hi, I'm <span class="text-primary-fixed-dim text-glow">Abhishek Jaswal</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    A Full Stack Developer with <span class="text-secondary-fixed-dim font-bold">3 years of experience</span> architecting high-performance digital environments. Specializing in neomorphic interfaces and CMS ecosystems.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="neo-card px-8 py-4 rounded-xl font-bold text-primary-fixed-dim border-primary/20 flex items-center gap-2 group">
+                        Initialize Project
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="flex items-center gap-6 px-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+</div>
+<div class="hidden md:block relative">
+<div class="neo-card aspect-square rounded-3xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/20 to-transparent mix-blend-overlay"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-64 h-64 neo-inset rounded-full flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-[120px] text-primary-fixed-dim/30">database</span>
+</div>
+</div>
+<div class="absolute top-6 right-6 neo-card p-4 rounded-2xl glass-panel">
+<div class="text-label-caps text-on-surface-variant">UPTIME</div>
+<div class="text-title-md text-primary-fixed-dim font-bold">99.9%</div>
+</div>
+<div class="absolute bottom-6 left-6 neo-card p-4 rounded-2xl glass-panel">
+<div class="text-label-caps text-on-surface-variant">STATUS</div>
+<div class="text-title-md text-secondary-fixed-dim font-bold">ACTIVE</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-24 bg-surface-container-lowest" id="skills">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-glow">Tech_Stack_Core</h2>
+<p class="text-on-surface-variant font-body-md">Optimized toolkits for digital domination</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+<!-- Skill Tile -->
+<div class="neo-card p-8 rounded-2xl flex flex-col items-center gap-4 group">
+<div class="w-16 h-16 neo-inset rounded-full flex items-center justify-center text-primary-fixed-dim group-hover:glow-cyan transition-all">
+<span class="material-symbols-outlined text-[32px]">code_blocks</span>
+</div>
+<span class="font-title-md">Full Stack</span>
+</div>
+<!-- CMS Tiles -->
+<div class="neo-card p-8 rounded-2xl flex flex-col items-center gap-4 group">
+<div class="w-16 h-16 neo-inset rounded-full flex items-center justify-center text-secondary-fixed-dim group-hover:glow-violet transition-all">
+<span class="material-symbols-outlined text-[32px]">webhook</span>
+</div>
+<span class="font-title-md">WordPress</span>
+</div>
+<div class="neo-card p-8 rounded-2xl flex flex-col items-center gap-4 group">
+<div class="w-16 h-16 neo-inset rounded-full flex items-center justify-center text-primary-fixed-dim group-hover:glow-cyan transition-all">
+<span class="material-symbols-outlined text-[32px]">shopping_cart</span>
+</div>
+<span class="font-title-md">Shopify</span>
+</div>
+<div class="neo-card p-8 rounded-2xl flex flex-col items-center gap-4 group">
+<div class="w-16 h-16 neo-inset rounded-full flex items-center justify-center text-secondary-fixed-dim group-hover:glow-violet transition-all">
+<span class="material-symbols-outlined text-[32px]">layers</span>
+</div>
+<span class="font-title-md">Wix</span>
+</div>
+<div class="neo-card p-8 rounded-2xl flex flex-col items-center gap-4 group">
+<div class="w-16 h-16 neo-inset rounded-full flex items-center justify-center text-primary-fixed-dim group-hover:glow-cyan transition-all">
+<span class="material-symbols-outlined text-[32px]">grid_view</span>
+</div>
+<span class="font-title-md">Squarespace</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Experience Section -->
+<section class="py-24 relative" id="experience">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="neo-card rounded-[40px] p-12 glass-panel border-white/5 grid md:grid-cols-3 gap-12 text-center">
+<div class="space-y-2">
+<div class="text-[56px] font-display-lg text-primary-fixed-dim text-glow">3+</div>
+<div class="text-label-caps text-on-surface-variant">YEARS EXPERIENCE</div>
+</div>
+<div class="space-y-2">
+<div class="text-[56px] font-display-lg text-secondary-fixed-dim glow-violet">150+</div>
+<div class="text-label-caps text-on-surface-variant">PROTOCOLS DEPLOYED</div>
+</div>
+<div class="space-y-2">
+<div class="text-[56px] font-display-lg text-tertiary-fixed-dim">100%</div>
+<div class="text-label-caps text-on-surface-variant">SYSTEM UPTIME</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="font-label-caps text-secondary text-label-caps tracking-widest">AJ.SYSTEMS_CORE</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-outline hover:text-secondary-fixed hover:-translate-y-1 transition-all duration-300 drop-shadow-[0_0_12px_rgba(235,178,255,0.6)]" href="#">Terminal</a>
+<a class="font-label-caps text-outline hover:text-secondary-fixed hover:-translate-y-1 transition-all duration-300 drop-shadow-[0_0_12px_rgba(235,178,255,0.6)]" href="#">GitHub</a>
+<a class="font-label-caps text-outline hover:text-secondary-fixed hover:-translate-y-1 transition-all duration-300 drop-shadow-[0_0_12px_rgba(235,178,255,0.6)]" href="#">LinkedIn</a>
+</div>
+<div class="font-label-caps text-outline text-[10px] text-center md:text-right">
+            © 2024 ABHISHEK JASWAL. ALL SYSTEMS OPERATIONAL.
+        </div>
+</div>
+</footer>
+</body></html>
